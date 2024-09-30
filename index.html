@@ -5,29 +5,7 @@
     <title>Scoreboard</title>
 </head>
 
-<!-- add a style script  -->
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    .score-block {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 500%;
-    }
-
-    .score-block .score-column {
-        border: 1px solid black;
-        display: inline-block;
-        width: 40%;
-    }
-
-    .score-block .score-column button{
-        font: inherit;
-        width: 40%
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
     <!-- center the title Scoreboard -->
@@ -36,17 +14,17 @@
 
     <!-- I need two number displays that take up half of the screen each -- home score and away score  -->
     <div class="score-block">
-        <div class="score-column">
-            <p style="text-align: center;">Home</p>
-            <p id="home-score" style="text-align: center;" [value]="homeScoreValue"></p>
+        <div style="text-align: center;" class="score-column">
+            Home
+            <p class="score-value-element" id="home-score"></p>
             <div>
                 <button style="font: inherit" id="home-decrement">-</button>
                 <button style="font: inherit" id="home-increment">+</button>
             </div>
         </div>
         <div class="score-column">
-            <p style="text-align: center;">Away</p>
-            <p id="away-score" style="text-align: center;" [value]="awayScoreValue"></p>
+            Away
+            <p class="score-value-element" id="away-score"></p>
             <div>
                 <button style="font: inherit" id="away-decrement">-</button>
                 <button style="font: inherit" id="away-increment">+</button>

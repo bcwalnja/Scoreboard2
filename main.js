@@ -1,15 +1,33 @@
 console.log("Welcome to the scoreboard script!");
+const homeScore = document.querySelector("#home-score");
+const awayScore = document.querySelector("#away-score");
+const homeIncrement = document.querySelector("#home-decrement");
+const homeDecrement = document.querySelector("#home-decrement");
+const awayIncrement = document.querySelector("#away-increment");
+const awayDecrement = document.querySelector("#away-decrement");
 
-// gather up the elements we need
-// home-score and away-score
-const homeScore = document.querySelector(".home-score");
-const awayScore = document.querySelector(".away-score");
+let _homeScoreValue = 0;
+let _awayScoreValue = 0;
 
-const homeIncrement = document.querySelector(".home-increment");
-const homeDecrement = document.querySelector(".home-decrement");
+Object.defineProperty(window, 'homeScoreValue', {
+    get: function() {
+        return _homeScoreValue;
+    },
+    set: function(value) {
+        _homeScoreValue = value;
+        homeScore.textContent = value;
+    }
+});
 
-const awayIncrement = document.querySelector(".away-increment");
-const awayDecrement = document.querySelector(".away-decrement");
+Object.defineProperty(window, 'awayScoreValue', {
+    get: function() {
+        return _awayScoreValue;
+    },
+    set: function(value) {
+        _awayScoreValue = value;
+        awayScore.textContent = value;
+    }
+});
 
-let homeScoreValue = 0;
-let awayScoreValue = 0;
+homeScoreValue = 0;
+awayScoreValue = 0;
