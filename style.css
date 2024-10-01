@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'system-ui', sans-serif;
     text-align: center;
 }
 
@@ -31,7 +31,12 @@ h1 {
     text-align: center;
 }
 
-.score-value-element {
+.game-clock-element {
+    font-size: 1000%;
+}
+
+.game-clock-element, .score-block .score-column .score-value-element {
+    font-family: 'Orbitron', sans-serif;
     display: block;
     margin: auto;
     width: 100%;
